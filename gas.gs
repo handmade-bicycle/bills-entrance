@@ -1,8 +1,8 @@
 const CHANNEL_ACCESS_TOKEN = 'YOURCHANNELTOKEN';
 const LINE_REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply';
 const recordSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('YOURSPREDSHEET');
-const userA = 'やまぐち'
-const userB = 'ゆうた'
+const userA = 'xx'
+const userB = 'yy'
 
 
 function doPost(e){
