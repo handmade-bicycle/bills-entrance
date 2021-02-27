@@ -1,6 +1,8 @@
 const CHANNEL_ACCESS_TOKEN = 'YOURCHANNELTOKEN';
 const LINE_REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply';
 const recordSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('YOURSPREDSHEET');
+const userA = 'やまぐち'
+const userB = 'ゆうた'
 
 
 function doPost(e){
@@ -25,8 +27,8 @@ function doPost(e){
     }catch(error){
       m = error + '\r\n\r\n USAGE:\r\n"*****円 費目"：貸し借りを記録\r\n'
       m = m + '　　-「円」必須\r\n'
-      m = m + '　　- 山口払いはプラス\r\n'
-      m = m + '　　  ゆうた払いはマイナスで計上\r\n'
+      m = m + '　　- ' + userA +'払いはプラス\r\n'
+      m = m + '　　  ' + userB +'払いはマイナスで計上\r\n'
       m = m + '"undo"：最新結果を消去\r\n'
       m = m + '"list -**"：最新**件の記録を出力'
     }finally{
